@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: sans-serif;
+  color: #333333;
 }
 
 img {
@@ -20,7 +21,6 @@ img {
 
 @media (max-width: 768px) {
   .container {
-    /*max-width: 580px*/
     width: 90%;
   }
 }
@@ -31,6 +31,7 @@ img {
   border: none;
   padding: 18px 30px;
   font-weight: 700;
+  font-size: 13px;
 }
 
 /* Импорт стилей шапки */
@@ -68,6 +69,8 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 .navbar__button {
@@ -105,13 +108,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero-text {
-  /*flex-basis: 50%*/
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
   padding-right: 140px;
 }
 
@@ -125,13 +129,13 @@ img {
 .hero-text__subtitle {
   display: inline-block;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 70px;
 }
 
 .hero-list {
   margin: 0;
-  padding: 0 3px;
+  padding: 0 0;
 }
 
 .hero-list__item {
@@ -144,10 +148,14 @@ img {
   margin-bottom: 25px;
 }
 
+.hero-list__text {
+  font-size: 14px;
+}
+
 .hero-list__image {
   width: 40px;
   height: 40px;
-  width: 40px;
+  min-width: 40px;
   border: 2px solid #ffd200;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,12 +170,9 @@ img {
   margin-right: 30px;
 }
 
-.hero-list__text {
-  max-width: 300px;
-}
-
 .hero-image {
-  border: 1px solid #ff0000;
+  -webkit-box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
+          box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 1200px) {
@@ -176,12 +181,24 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .hero-list {
     margin-bottom: 44px;
   }
+  .hero-list__text {
+    font-size: 14px;
+  }
   .hero-text {
-    margin-right: 10px;
+    margin-right: 0;
+  }
+  .hero-image {
+    width: 100%;
+  }
+  .hero-image img {
+    width: 100%;
   }
 }
 
@@ -207,5 +224,10 @@ img {
   .hero-list__image {
     margin-right: 15px;
   }
+  .hero-image {
+    width: 100%;
+  }
+  .hero-image img {
+    width: 100%;
+  }
 }
-/*# sourceMappingURL=style.css.map */
