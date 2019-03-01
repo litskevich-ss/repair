@@ -8,14 +8,14 @@
     padding-right: 140px
     &__title
       font-size: 41px
-      font-weight: 700
       line-height: 55px
       margin-bottom: 36px
+      +bold
     &__subtitle
       display: inline-block
       font-size: 20px
-      font-weight: 700
       margin-bottom: 70px
+      +bold
   &-list
     margin: 0
     padding: 0 0
@@ -36,7 +36,10 @@
       border-radius: 50%
       margin-right: 30px
   &-image
+    /*width: 100%*/
     box-shadow: 7px 5px 10px $text-shadow-color, 16px 22px 35px $text-shadow-color
+    & img
+      width: 100%
 @media (max-width: 1200px)
   .hero
     &-block
@@ -48,10 +51,6 @@
         font-size: 14px
     &-text
       margin-right: 0
-    &-image
-      width: 100%
-      & img
-        width: 100%
 @media (max-width: 768px)
   .hero
     &-text
@@ -70,7 +69,3 @@
         font-size: 12px
       &__image
         margin-right: 15px
-    &-image
-      width: 100%
-      & img
-        width: 100%
