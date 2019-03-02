@@ -31,30 +31,49 @@
     width: 100%
     min-height: 70px
     margin-bottom: 30px
+    padding: 27px 100px
+    font-size: 16px
   &-explanation
     display: flex
-    justify-content: space-between
+    justify-content: center
+    font-size: 15px
     line-height: 24px
     & .explanation__text
-        width: 50%
-        margin-right: 10px
         & .phone
-            font-size: 15px
+            +bold
+        &:first-child
+            width: 50%
+            margin-right: 50px
+        & .phone
             +bold
 @media (max-width: 1200px)
   .offer
+    background-size: cover
+    &__title
+      margin-bottom: 20px
+      font-size: 18px
+    &__subtitle
+      margin-bottom: 27px
+      font-size: 14px
     &__input
       width: 100%
       margin-bottom: 10px
     &__button
+      margin-bottom: 27px
+      padding: 19px 64px
       font-size: 13px
     &-explanation
       flex-direction: column
       & .explanation__text
         width: 100%
         margin-right: 0
+        &:first-child
+            width: 100%
+            margin-right: 0
         &:not(:first-child)
           margin-top: 18px
+  .section
+    padding: 50px 0
 @media (max-width: 768px)
   .offer
     background: $main-bg-color
