@@ -66,10 +66,6 @@ img {
   outline: none;
 }
 
-.button:active {
-  padding: 19px 29px 17px 31px;
-}
-
 .section {
   padding: 90px 0;
 }
