@@ -101,13 +101,13 @@ img {
           justify-content: flex-end;
 }
 
-.section-bottom .container .section-bottom__up {
+.section-bottom .container.section-bottom__up {
   display: inline-block;
   font-size: 64px;
   color: #ffd200;
 }
 
-.section-bottom .container .section-bottom__up:hover {
+.section-bottom .container.section-bottom__up:hover {
   color: #ffdb33;
   cursor: pointer;
 }
