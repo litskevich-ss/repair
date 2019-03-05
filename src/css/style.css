@@ -276,6 +276,10 @@ img {
   margin-right: 30px;
 }
 
+.hero-list__image img {
+  width: 20px;
+}
+
 .hero-image {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
