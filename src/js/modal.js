@@ -5,6 +5,8 @@ $(document).ready(function () {
 
   button.on('click', function () {
     modal.addClass('modal_active');
+    $('bo')
+    blur - bg
   });
 
   close.on('click', function () {

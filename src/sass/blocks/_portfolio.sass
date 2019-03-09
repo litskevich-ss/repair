@@ -2,15 +2,33 @@
   background: $secondary url('../img/portfolio/portfolio-pattern.jpg') repeat-y center left
   background-size: 50%
   &__title
-    max-width: 500px
+    /*max-width: 500px*/
     margin: auto
     margin-bottom: 100px
+    font-size: 30px;
+    line-height: 45px;
+    +bold
   &__arrows
     max-width: 120px
     margin: auto
     margin-top: 68px
     display: flex
     justify-content: space-between
-  .slider
-    &__image
-      margin: auto
+
+.arrows__left, .arrows__right
+  width: 45px
+  height: 19px
+  border: none
+  outline: none
+
+.arrows__left
+  display: inline-block
+  background: url('../img/portfolio/left-arrow.png')
+
+.arrows__right
+  display: inline-block
+  background: url('../img/portfolio/right-arrow.png')
+
+.slider__image
+  max-width: 370px
+  margin: auto

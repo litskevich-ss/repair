@@ -55,6 +55,7 @@ img {
   border-radius: 50%;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  z-index: 3000;
 }
 
 .upTop:hover {
@@ -122,7 +123,7 @@ img {
 
 .input {
   border: 1px solid #dddddd;
-  padding: 20px 26px;
+  padding: 22px 26px;
   font-size: 15px;
   border-radius: 10px;
 }
@@ -391,7 +392,7 @@ img {
   width: 100%;
   min-height: 70px;
   margin-bottom: 30px;
-  padding: 27px 100px;
+  padding: 26px 100px;
   font-size: 16px;
 }
 
@@ -487,9 +488,13 @@ img {
 }
 
 .portfolio__title {
-  max-width: 500px;
+  /*max-width: 500px*/
   margin: auto;
   margin-bottom: 100px;
+  font-size: 30px;
+  line-height: 45px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .portfolio__arrows {
@@ -504,7 +509,25 @@ img {
           justify-content: space-between;
 }
 
-.portfolio .slider__image {
+.arrows__left, .arrows__right {
+  width: 45px;
+  height: 19px;
+  border: none;
+  outline: none;
+}
+
+.arrows__left {
+  display: inline-block;
+  background: url("../img/portfolio/left-arrow.png");
+}
+
+.arrows__right {
+  display: inline-block;
+  background: url("../img/portfolio/right-arrow.png");
+}
+
+.slider__image {
+  max-width: 370px;
   margin: auto;
 }
 

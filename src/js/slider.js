@@ -1,23 +1,24 @@
 $(document).ready(function () {
-  $('.slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    'prevArrow': $('.arrows__left'),
-    'nextArrow': $('.arrows__right'),
-    responsive: [{
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
+  $('.slider').owlCarousel({
+    items: 6,
+    loop: true,
+    nav: true,
+    dots: false,
+    itemElement: 'slider_item',
+    navContainerClass: 'portfolio__arrows',
+    navClass: ['arrows__left', 'arrows__right'],
+    navText: [],
+    responsiveClass: true,
+    responsive: {
+       0: {
+        items: 1,
       },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+      768: {
+        items: 2,
+      },
+      1200: {
+        items: 3,
       }
-    ]
+    }
   });
 });
