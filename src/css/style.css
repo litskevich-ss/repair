@@ -578,10 +578,6 @@ img {
 }
 
 /* Стили для блока с ценами*/
-.price {
-  padding: 100px 0;
-}
-
 .price__title {
   margin: auto;
   margin-bottom: 58px;
@@ -744,6 +740,10 @@ img {
   max-width: 160px;
   font-size: 14px;
   line-height: 20px;
+}
+
+.steps {
+  padding: 50px 0 90px 0;
 }
 
 .steps__title {
