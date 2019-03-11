@@ -21,8 +21,6 @@
     margin-top: 0
   &__image
     position: relative
-    .as-block
-      display: block
     &:before
       content: ''
       position: absolute
@@ -33,6 +31,8 @@
       background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
       opacity: 0
       transition: 0.2s
+  &__img
+    display: block
   &__link
     display: inline-block
     +bold
@@ -58,3 +58,20 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+/*@media(min-width: 1199)
+  .card
+    margin-right: 27px
+    &:nth-child(3n+3)
+      margin-right: 0*/
+/*@media (max-width: 1200px)
+  .card
+    margin-right: 30px
+    width: 365px
+    &:nth-child(2n+2)
+      margin-right: 0*/
+@media (max-width: 768px)
+  .card
+    /*margin-right: 0*/
+    width: 100%
+    & img
+      width: 100%

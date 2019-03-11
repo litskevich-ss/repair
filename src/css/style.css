@@ -530,6 +530,12 @@ img {
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  .slider__image {
+    max-width: 100%;
+  }
+}
+
 /* Подключаем стили для блока с ценами*/
 .price__title {
   margin: auto;
@@ -573,10 +579,6 @@ img {
   position: relative;
 }
 
-.card__image .as-block {
-  display: block;
-}
-
 .card__image:before {
   content: '';
   position: absolute;
@@ -589,6 +591,10 @@ img {
   opacity: 0;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.card__img {
+  display: block;
 }
 
 .card__link {
@@ -628,6 +634,27 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+/*@media(min-width: 1199)
+  .card
+    margin-right: 27px
+    &:nth-child(3n+3)
+      margin-right: 0*/
+/*@media (max-width: 1200px)
+  .card
+    margin-right: 30px
+    width: 365px
+    &:nth-child(2n+2)
+      margin-right: 0*/
+@media (max-width: 768px) {
+  .card {
+    /*margin-right: 0*/
+    width: 100%;
+  }
+  .card img {
+    width: 100%;
+  }
 }
 
 /* Подключаем стили для модального окна*/
