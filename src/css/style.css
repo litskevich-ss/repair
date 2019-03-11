@@ -561,6 +561,7 @@ img {
 @media (max-width: 768px) {
   .portfolio {
     padding: 40px 0 64px 0;
+    background: none;
   }
   .portfolio__title {
     margin-bottom: 40px;
