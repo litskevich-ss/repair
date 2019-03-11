@@ -2,14 +2,19 @@ $(document).ready(function () {
   var button = $('#button');
   var modal = $('#modal');
   var close = $('#close');
+  var callme = $('#callme');
+  var ordercall = $('#ordercall');
 
   button.on('click', function () {
+callme.removeClass("animated").addClass("animated");
     modal.addClass('modal_active');
-    $('bo')
-    blur - bg
   });
 
   close.on('click', function () {
+    modal.removeClass('modal_active');
+  });
+
+  ordercall.on('click', function () {
     modal.removeClass('modal_active');
   });
 });

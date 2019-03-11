@@ -27,7 +27,8 @@
             <a href="tel:+7(495) 42-251-31" class="navbar__phone">+7(495) 42-251-31</a>
           </div>
           <!-- /.navbar__contacts -->
-          <button class="button navbar__button wow pulse animated" id="button" data-wow-delay="2s" data-wow-iteration="infinite" data-wow-duration="2s">Перезвоните мне</button>
+          <button class="button navbar__button wow pulse animated" id="button" data-wow-delay="2s" data-wow-iteration="infinite"
+            data-wow-duration="2s">Перезвоните мне</button>
         </div>
         <!-- /.navbar__info -->
       </div>
@@ -54,12 +55,14 @@
                 <span class="hero-list__text wow fadeInDown" data-wow-delay="0.2s">Точно соблюдаем сроки</span>
               </li>
               <li class="hero-list__item">
-                <div class="hero-list__image wow rollIn" data-wow-delay="0.9s"><img src="img/hero/calculator.svg" alt="calculator"></div>
-                <span class="hero-list__text wow fadeInDown" data-wow-delay="0.3s">Рассчитаем смету на работы и материалы в день обращения</span>
+                <div class="hero-list__image wow rollIn" data-wow-delay="0.8s"><img src="img/hero/calculator.svg" alt="calculator"></div>
+                <span class="hero-list__text wow fadeInDown" data-wow-delay="0.3s">Рассчитаем смету на работы и
+                  материалы в день обращения</span>
               </li>
               <li class="hero-list__item">
-                <div class="hero-list__image wow rollIn" data-wow-delay="1s"><img src="img/hero/paint-board.svg" alt="paint-board"></div>
-                <span class="hero-list__text wow fadeInDown" data-wow-delay="0.4s">Предложим более 100 вариантов исполнения дизайна Вашего жилья</span>
+                <div class="hero-list__image wow rollIn" data-wow-delay="0.8s"><img src="img/hero/paint-board.svg" alt="paint-board"></div>
+                <span class="hero-list__text wow fadeInDown" data-wow-delay="0.4s">Предложим более 100 вариантов
+                  исполнения дизайна Вашего жилья</span>
               </li>
             </ul>
             <!-- /.hero-list -->
@@ -80,9 +83,12 @@
   <section class="offer section">
     <div class="container">
       <div class="offer-block">
-        <h2 class="section-title offer__title wow slideInLeft">Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!</h2>
+        <h2 class="section-title offer__title wow fadeInUp" data-wow-delay="0.8s">Мы бесплатно разработаем
+          дизайн-проект Вашего жилья и
+          реализуем его!</h2>
         <!-- /.section-title -->
-        <span class="section-subtitle offer__subtitle wow slideInLeft">Оставьте заявку на разработку
+        <span class="section-subtitle offer__subtitle wow fadeInUp" data-wow-delay="1.3s">Оставьте заявку на
+          разработку
           бесплатного дизайн-проекта!</span>
         <!-- /.section-subtitle -->
         <form action="#" class="form offer__form">
@@ -92,8 +98,10 @@
         </form>
         <!-- /.form offer__form -->
         <div class="offer-explanation">
-          <div class="explanation__text wow slideInUp" data-wow-delay="0.3s">Наш менеджер перезвонит Вам в течение 60 секунд</div>
-          <div class="explanation__text wow slideInUp" data-wow-delay="0.3s">или перезвоните нам сами<br><span class="phone"> +7(495) 42-251-31</span></div>
+          <div class="explanation__text wow slideInUp" data-wow-delay="0.3s">Наш менеджер перезвонит Вам в течение 60
+            секунд</div>
+          <div class="explanation__text wow slideInUp" data-wow-delay="0.3s">или перезвоните нам сами<br><span class="phone">
+              +7(495) 42-251-31</span></div>
         </div>
       </div>
       <!-- /.offer-block -->
@@ -104,9 +112,10 @@
 
   <section class="section portfolio">
     <div class="container">
-      <h2 class="section-title portfolio__title">Работая с 2007 года,<br> мы сделали более 500 ремонтов в квартирах и
+      <h2 class="section-title portfolio__title wow slideInUp">Работая с 2007 года,<br> мы сделали более 500 ремонтов в
+        квартирах и
         домах</h2>
-      <div class="slider owl-carousel">
+      <div class="slider owl-carousel wow fadeIn" data-wow-delay="0.3s">
         <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-1.jpg" alt=""></div>
         <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-2.jpg" alt=""></div>
         <div class="slider__item"><img class="slider__image" src="img/portfolio/slider-3.jpg" alt=""></div>
@@ -123,9 +132,9 @@
 
   <section class="section price">
     <div class="container">
-      <h2 class="section-title price__title">У нас очень гибкая система скидок на комплексные работы!</h2>
+      <h2 class="section-title price__title wow slideInUp">У нас очень гибкая система скидок на комплексные работы!</h2>
       <!-- /.section-title price__title -->
-      <span class="section-subtitle price__subtitle">Прайс на наши услуги</span>
+      <span class="section-subtitle price__subtitle wow slideInUp">Прайс на наши услуги</span>
       <!-- /.section-subtitle price__subtitle -->
       <div class="cards">
         <div class="card price__card wow fadeInUp">
@@ -211,9 +220,13 @@
   <div class="upTop" id="upTop"><i class="fas fa-angle-double-up icon"></i></div>
 
   <div class="modal" id="modal">
-    <div class="modal-dialog">
+    <div class="modal-dialog wow zoomIn" id="callme">
       <button class="modal-dialog__close button" id="close">&times;</button>
-      <h4 class="modal-dialog__title">Всплывающее окно</h4>
+      <h4 class="modal-dialog__title">Заказать звонок</h4>
+      <input type="tel" class="input modal-dialog__input" placeholder="Ваш телефон">
+      <div class="buttons">
+        <button class="button modal-dialog__button" id="ordercall">Заказать</button>
+      </div>
     </div>
     <!-- /.modal-dialog -->
   </div>
@@ -224,8 +237,6 @@
   <script src="js/owl.carousel.min.js"></script>
 
   <script src="js/modal.js"></script>
-
-  <script src="js/slider.js"></script>
 
   <script src="js/wow.min.js"></script>
 

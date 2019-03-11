@@ -127,10 +127,32 @@ img {
   padding: 22px 26px;
   font-size: 15px;
   border-radius: 10px;
+  outline: none;
+}
+
+.input:focus {
+  border: 1px solid #ffd200;
 }
 
 .arrows__left, .arrows__right {
   cursor: pointer;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.buttons btn {
+  margin-right: 30px;
+}
+
+.buttons btn:last-child {
+  margin-right: 0;
 }
 
 /* Импорт стилей шапки */
@@ -173,6 +195,11 @@ img {
 
 .navbar__button {
   margin-left: 30px;
+}
+
+.navbar__button:hover {
+  -webkit-animation-name: pulse animated;
+          animation-name: pulse animated;
 }
 
 .navbar__phone {
@@ -483,6 +510,7 @@ img {
 
 /* Подключаем стили для блока портфолио*/
 .portfolio {
+  padding: 100px 0;
   background: #f5f5f5 url("../img/portfolio/portfolio-pattern.jpg") repeat-y center left;
   background-size: 50%;
 }
@@ -531,12 +559,26 @@ img {
 }
 
 @media (max-width: 768px) {
+  .portfolio {
+    padding: 40px 0 64px 0;
+  }
+  .portfolio__title {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .portfolio__arrows {
+    margin-top: 46px;
+  }
   .slider__image {
     max-width: 100%;
   }
 }
 
 /* Подключаем стили для блока с ценами*/
+.price {
+  padding: 100px 0;
+}
+
 .price__title {
   margin: auto;
   margin-bottom: 58px;
@@ -636,20 +678,17 @@ img {
       flex-wrap: wrap;
 }
 
-/*@media(min-width: 1199)
-  .card
-    margin-right: 27px
-    &:nth-child(3n+3)
-      margin-right: 0*/
-/*@media (max-width: 1200px)
-  .card
-    margin-right: 30px
-    width: 365px
-    &:nth-child(2n+2)
-      margin-right: 0*/
 @media (max-width: 768px) {
+  .price {
+    padding: 50px 0;
+  }
+  .price__title {
+    margin-bottom: 27px;
+  }
+  .price__subtitle {
+    margin-bottom: 61px;
+  }
   .card {
-    /*margin-right: 0*/
     width: 100%;
   }
   .card img {
@@ -681,8 +720,16 @@ img {
   width: 90%;
   min-width: 200px;
   background-color: #ffffff;
-  padding: 0 20px 20px 20px;
+  padding: 15px 20px 20px 20px;
   border-radius: 5px;
+}
+
+.modal-dialog__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  text-align: center;
 }
 
 .modal-dialog__close {
@@ -690,6 +737,19 @@ img {
   top: 0;
   right: 0;
   margin: 3px 3px 0 0;
-  padding: 5px 10px;
-  border-radius: 3px;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 4px;
 }
+
+.modal-dialog__input {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.modal-dialog__button {
+  font-size: 16px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

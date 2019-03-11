@@ -66,6 +66,16 @@ img
   padding: 22px 26px
   font-size: 15px
   border-radius: 10px
+  outline: none
+  &:focus,
+    border: 1px solid $main-color
 .arrows
   &__left, &__right
     cursor: pointer
+.buttons
+  display: flex
+  justify-content: center
+  & btn
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
