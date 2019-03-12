@@ -711,6 +711,10 @@ img {
   height: 25px;
   content: '';
   background: url("../img/steps/arrow.png") no-repeat center;
+  -webkit-animation-name: rotateInDownLeft;
+          animation-name: rotateInDownLeft;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 .step:last-child:after {
@@ -804,6 +808,64 @@ img {
   }
 }
 
+/* Стили для блока бриф*/
+.brif-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.brif__interview {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.brif__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.brif .interview {
+  padding-right: 70px;
+}
+
+.brif .interview__title {
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.brif .interview__subtitle {
+  display: block;
+  margin-bottom: 95px;
+  font-size: 16px;
+}
+
+.brif .interview-list {
+  list-style: none;
+  padding: 0;
+}
+
+.brif .form__title {
+  margin: auto;
+}
+
+.brif .form__subtitle {
+  text-align: center;
+}
+
+.brif .form__description {
+  text-align: center;
+}
+
 /* Подключаем стили для модального окна*/
 .modal {
   position: fixed;
@@ -860,3 +922,4 @@ img {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
+/*# sourceMappingURL=style.css.map */
