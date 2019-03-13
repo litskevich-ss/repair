@@ -23,7 +23,7 @@
 body {
   font-family: 'Museo Sans Light', sans-serif;
   font-weight: 300;
-  color: #000000;
+  color: #333333;
 }
 
 img {
@@ -38,7 +38,7 @@ img {
 .upTop {
   position: fixed;
   right: 20px;
-  bottom: 100px;
+  bottom: 30px;
   width: 50px;
   height: 50px;
   background-color: #ffd200;
@@ -71,7 +71,7 @@ img {
 
 .icon {
   font-size: 20px;
-  color: #000000;
+  color: #333333;
 }
 
 @media (max-width: 1200px) {
@@ -159,6 +159,14 @@ img {
   margin-right: 0;
 }
 
+.invalid {
+  position: absolute;
+  font-size: 12px;
+  color: #fd654a;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
 /* Импорт стилей шапки */
 .navbar {
   padding: 8px 0;
@@ -208,7 +216,7 @@ img {
 
 .navbar__phone {
   display: inline-block;
-  color: #000000;
+  color: #333333;
   font-size: 20px;
   text-decoration: none;
   margin-top: 6px;
@@ -440,7 +448,7 @@ img {
 
 .offer-explanation .explanation__text .phone {
   text-decoration: none;
-  color: #000000;
+  color: #333333;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
@@ -582,6 +590,10 @@ img {
 }
 
 /* Стили для блока с ценами*/
+.price {
+  color: #000000;
+}
+
 .price__title {
   margin: auto;
   margin-bottom: 58px;
@@ -647,7 +659,7 @@ img {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
   text-decoration: none;
-  color: #000000;
+  color: #333333;
   font-size: 16px;
   position: relative;
 }
@@ -705,6 +717,7 @@ img {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   text-align: center;
+  color: #000000;
 }
 
 .step:after {
@@ -854,6 +867,7 @@ img {
 
 .brif .interview {
   padding-right: 70px;
+  color: #000000;
 }
 
 .brif .interview__title {
@@ -895,7 +909,7 @@ img {
   height: 35px;
   min-width: 35px;
   font-size: 14px;
-  border: 2px solid #000000;
+  border: 2px solid #333333;
   border-radius: 50%;
 }
 
@@ -903,7 +917,18 @@ img {
   max-width: 400px;
 }
 
+.brif .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .brif .form__title {
+  margin-top: 50px;
   margin-bottom: 50px;
   font-size: 22px;
   font-family: 'Museo Sans Bold', sans-serif;
@@ -933,6 +958,7 @@ img {
   .interview__title {
     font-size: 20px;
     margin-bottom: 15px;
+    margin-top: 60px;
   }
   .interview__subtitle {
     margin-bottom: 30px;
@@ -964,12 +990,12 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .brif__form {
     margin-top: 80px;
+  }
+  .interview__title {
+    margin-top: 60px;
   }
 }
 
@@ -1029,3 +1055,4 @@ img {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
+/*# sourceMappingURL=style.css.map */

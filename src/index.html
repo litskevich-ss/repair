@@ -91,9 +91,9 @@
           разработку
           бесплатного дизайн-проекта!</span>
         <!-- /.section-subtitle -->
-        <form action="#" class="form offer__form">
-          <input type="text" class="input offer__input wow slideInLeft" placeholder="Ваше имя">
-          <input type="tel" class="input offer__input wow slideInLeft" placeholder="Ваш телефон">
+        <form action="#" class="form offer__form" id="offer-form">
+          <input type="text" name="customername" class="input offer__input wow slideInLeft" placeholder="Ваше имя">
+          <input type="tel" name="phone" class="input offer__input wow slideInLeft" placeholder="Ваш телефон">
           <button class="button offer__button wow slideInLeft">Получить бесплатный дизайн-проект</button>
         </form>
         <!-- /.form offer__form -->
@@ -275,19 +275,19 @@
           <span class="interview__subtitle">Для этого нужно ответить на 4 вопроса:</span>
           <ul class="interview-list">
             <li class="interview-list__item">
-              <span class="interview-list__counter">1</span>
-              <span class="interview-list__text">Какова площадь помещения?</span>
+              <span class="interview-list__counter">&nbsp;1.</span>
+              <span class="interview-list__text">&nbsp;Какова площадь помещения?</span>
             </li>
             <li class="interview-list__item">
-              <span class="interview-list__counter">2</span>
+              <span class="interview-list__counter">&nbsp;2.</span>
               <span class="interview-list__text">У Вас новостройка или вторичное жилье?</span>
             </li>
             <li class="interview-list__item">
-              <span class="interview-list__counter">3</span>
+              <span class="interview-list__counter">&nbsp;3.</span>
               <span class="interview-list__text">Где находится помещение, в котором будет производиться ремонт?</span>
             </li>
             <li class="interview-list__item">
-              <span class="interview-list__counter">4</span>
+              <span class="interview-list__counter">&nbsp;4.</span>
               <span class="interview-list__text">Назначение помещения?</span>
             </li>
           </ul>
@@ -297,11 +297,13 @@
         <div class="form brif__form">
           <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
           <span class="form__subtitle">Для этого заполните форму ниже</span>
-          <form action="#">
-            <input type="text" class="input brif__input" placeholder="Ваше имя">
-            <input type="tel" class="input brif__input" placeholder="Ваш телефон">
-            <button class="button brif__button">Узнать стоимость</button>
+          <form action="#" id="brif-form">
+            <input type="text" name="customername" class="input brif__input" placeholder="Ваше имя">
+            <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
+            <input type="email" name="email" class="input brif__input" placeholder="Ваш email">
+            <button class="button brif__button">Рассчитать стоимость</button>
             <span class="form__description">Мы перезвоним Вам в течение 60 секунд</span>
+            <div id="errorContainer"></div>
           </form>
         </div>
         <!-- /.brif__form -->
@@ -318,7 +320,7 @@
     <div class="modal-dialog wow zoomIn" id="callme">
       <button class="modal-dialog__close button" id="close">&times;</button>
       <h4 class="modal-dialog__title">Заказать звонок</h4>
-      <input type="tel" class="input modal-dialog__input" placeholder="Ваш телефон">
+      <input type="tel" class="input modal-dialog__input phone" placeholder="Ваш телефон">
       <div class="buttons">
         <button class="button modal-dialog__button" id="ordercall">Заказать</button>
       </div>
@@ -328,21 +330,94 @@
   <!-- /.modal -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
-
   <script src="js/owl.carousel.min.js"></script>
-
   <script src="js/modal.js"></script>
-
   <script src="js/wow.min.js"></script>
-
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/main.js"></script>
 
   <script>
     /* Инициализация WOW.js */
     new WOW().init();
 
-    /* Инициализация слайдера */
     $(document).ready(function () {
+      /* Валидация форм */
+      $('#offer-form').validate({
+        rules: {
+          customername: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: {
+            required: true
+          }
+        },
+        messages: {
+          customername: {
+            required: "Заполните поле",
+            minlength: "Поле должно содержать минимум 2 символа",
+            maxlength: "Поле не должно превышать 15 символов"
+          },
+          phone: "Заполните поле"
+        },
+        errorPlacement: function (error, element) {
+          //error.insertAfter(element);
+
+          $('.invalid').remove();
+
+          var offset = element.offset();
+          var errorMessage = $('<div class="invalid">' + error.text() + '</div>');
+          //errorMessage.css('left', element.left);
+          //errorMessage.css('top', element.top);
+
+          errorMessage.insertAfter(element);
+
+          //element.attr('placeHolder', error.text());
+
+          //var elementForm = "", containerError = "";
+          //offset = element.offset();
+          //elementForm = element.attr("name");
+          //containerError = "#" + elementForm + "error";
+          //error.prependTo(containerError);
+          //error.addClass('message');
+        }
+      });
+      
+      $('#brif-form').validate({
+        rules: {
+          customername: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          phone: {
+            required: true
+          }
+        },
+        messages: {
+          customername: {
+            required: "Заполните поле",
+            minlength: "Поле должно содержать минимум 2 символа",
+            maxlength: "Поле не должно превышать 15 символов"
+          },
+          phone: "Заполните поле",
+          email: {
+            required: "Заполните поле",
+            email: "Введите корректный email"
+          }
+        }
+      });
+
+      /* Маска для телефона*/
+      $('.phone').mask('8 (999) 999-99-99');
+
+      /* Инициализация слайдера */
       $('.slider').owlCarousel({
         items: 6,
         loop: true,
