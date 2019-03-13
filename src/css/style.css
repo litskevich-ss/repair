@@ -159,9 +159,11 @@ img {
   margin-right: 0;
 }
 
-.invalid {
-  position: absolute;
+label.error {
+  display: block;
+  margin-bottom: 10px;
   font-size: 12px;
+  text-align: center;
   color: #fd654a;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
@@ -461,6 +463,10 @@ img {
 .offer-explanation .explanation__text .phone {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
+}
+
+.offer .error {
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -1055,4 +1061,3 @@ img {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
-/*# sourceMappingURL=style.css.map */

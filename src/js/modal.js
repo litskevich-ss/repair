@@ -6,7 +6,7 @@ $(document).ready(function () {
   var ordercall = $('#ordercall');
 
   button.on('click', function () {
-callme.removeClass("animated").addClass("animated");
+    callme.removeClass("animated").addClass("animated");
     modal.addClass('modal_active');
   });
 
@@ -14,7 +14,13 @@ callme.removeClass("animated").addClass("animated");
     modal.removeClass('modal_active');
   });
 
-  ordercall.on('click', function () {
+  ordercall.on('submit', function () {
+
+    var validator = $("#modal-form").validate();
+    validator.form();
+
     modal.removeClass('modal_active');
+
   });
+
 });

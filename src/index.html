@@ -220,7 +220,8 @@
 
   <section class="section steps">
     <div class="container">
-      <h2 class="section-title steps__title wow fadeInUp">Наши специалисты готовы выехать на замер в любое удобное для Вас время</h2>
+      <h2 class="section-title steps__title wow fadeInUp">Наши специалисты готовы выехать на замер в любое удобное для
+        Вас время</h2>
       <!-- /.section-title steps__title -->
       <span class="section-subtitle steps__subtitle wow fadeInUp">5 шагов до ремонта</span>
       <!-- /.section-subtitle steps__subtitle -->
@@ -235,7 +236,8 @@
         <div class="step">
           <div class="step__image wow rollIn" data-wow-delay="0.2s"><img src="img/steps/wall-clock.svg" alt=""></div>
           <!-- /.step__image -->
-          <p class="step__text wow fadeInUp" data-wow-delay="0.7s">Согласуем удобное для Вас время выезда специалиста на замер</p>
+          <p class="step__text wow fadeInUp" data-wow-delay="0.7s">Согласуем удобное для Вас время выезда специалиста
+            на замер</p>
           <!-- /.step__text -->
         </div>
         <!-- /.step -->
@@ -249,7 +251,8 @@
         <div class="step">
           <div class="step__image wow rollIn" data-wow-delay="0.4s"><img src="img/steps/folded-document-icon.svg" alt=""></div>
           <!-- /.step__image -->
-          <p class="step__text wow fadeInUp" data-wow-delay="0.9s">Подписываем договор закупаем материал по оптовым ценам</p>
+          <p class="step__text wow fadeInUp" data-wow-delay="0.9s">Подписываем договор закупаем материал по оптовым
+            ценам</p>
           <!-- /.step__text -->
         </div>
         <!-- /.step -->
@@ -298,18 +301,28 @@
           <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
           <span class="form__subtitle">Для этого заполните форму ниже</span>
           <form action="#" id="brif-form">
-            <input type="text" name="customername" class="input brif__input" placeholder="Ваше имя">
-            <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
-            <input type="email" name="email" class="input brif__input" placeholder="Ваш email">
+
+            <div class="input-group">
+              <input type="text" name="customername" class="input brif__input" placeholder="Ваше имя">
+            </div>
+
+            <div class="input-group">
+              <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
+            </div>
+
+            <div class="input-group">
+              <input type="email" name="email" class="input brif__input" placeholder="Ваш email">
+            </div>
+
             <button class="button brif__button">Рассчитать стоимость</button>
             <span class="form__description">Мы перезвоним Вам в течение 60 секунд</span>
             <div id="errorContainer"></div>
           </form>
         </div>
         <!-- /.brif__form -->
-      </brif-block>
-    </div>
-    <!-- /.container -->
+        </brif-block>
+      </div>
+      <!-- /.container -->
   </section>
   <!-- /.section brif -->
 
@@ -320,10 +333,12 @@
     <div class="modal-dialog wow zoomIn" id="callme">
       <button class="modal-dialog__close button" id="close">&times;</button>
       <h4 class="modal-dialog__title">Заказать звонок</h4>
-      <input type="tel" class="input modal-dialog__input phone" placeholder="Ваш телефон">
-      <div class="buttons">
-        <button class="button modal-dialog__button" id="ordercall">Заказать</button>
-      </div>
+      <form action="#" id="modal-form">
+        <input type="tel" name="phone" class="input modal-dialog__input phone" placeholder="Ваш телефон">
+        <div class="buttons">
+          <button class="button modal-dialog__button" id="ordercall">Заказать</button>
+        </div>
+      </form>
     </div>
     <!-- /.modal-dialog -->
   </div>
@@ -361,30 +376,9 @@
             maxlength: "Поле не должно превышать 15 символов"
           },
           phone: "Заполните поле"
-        },
-        errorPlacement: function (error, element) {
-          //error.insertAfter(element);
-
-          $('.invalid').remove();
-
-          var offset = element.offset();
-          var errorMessage = $('<div class="invalid">' + error.text() + '</div>');
-          //errorMessage.css('left', element.left);
-          //errorMessage.css('top', element.top);
-
-          errorMessage.insertAfter(element);
-
-          //element.attr('placeHolder', error.text());
-
-          //var elementForm = "", containerError = "";
-          //offset = element.offset();
-          //elementForm = element.attr("name");
-          //containerError = "#" + elementForm + "error";
-          //error.prependTo(containerError);
-          //error.addClass('message');
         }
       });
-      
+
       $('#brif-form').validate({
         rules: {
           customername: {
@@ -411,6 +405,17 @@
             required: "Заполните поле",
             email: "Введите корректный email"
           }
+        }
+      });
+
+      $('#modal-form').validate({
+        rules: {
+          phone: {
+            required: true
+          }
+        },
+        messages: {
+          phone: "Заполните поле"
         }
       });
 
