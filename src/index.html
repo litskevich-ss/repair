@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel=" stylesheet" href="css/style.css">
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(52790344, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/52790344" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -308,9 +309,9 @@
               телефону</h3>
             <span class="form__subtitle wow fadeInUp" data-wow-delay="0.4s">Для этого заполните форму ниже</span>
             <form action="#" id="brif-form">
-
               <input type="text" name="customername" class="input brif__input wow slideInRight" data-wow-delay="0.1s"
                 placeholder="Ваше имя">
+                <span id="er"></span>
               <input type="tel" name="phone" class="input brif__input phone wow slideInRight" data-wow-delay="0.2s"
                 placeholder=" Ваш телефон">
               <input type="email" name="email" class="input brif__input wow slideInRight" data-wow-delay="0.3s"
@@ -415,6 +416,7 @@
       });
 
       $('#brif-form').validate({
+        
         rules: {
           customername: {
             required: true,
@@ -481,6 +483,7 @@
           }
         }
       });
+
     });
   </script>
 
