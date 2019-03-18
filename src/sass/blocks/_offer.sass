@@ -1,8 +1,8 @@
 .offer
+  position: relative
   background: url('../img/offer/offer-bg.jpg')
   background-position: center right
   background-size: contain
-  position: relative
   &:before
     content: ''
     width: 50%
@@ -22,11 +22,14 @@
   &__subtitle
     max-width: 250px
     margin-bottom: 30px
-  &__input
-    margin-bottom: 30px
+  .form-group
+    display: inline-block
     width: 240px
     &:first-child
       margin-right: 10px
+  &__input
+    margin-bottom: 30px
+    width: 100%
   &__button
     width: 100%
     min-height: 70px
@@ -48,8 +51,6 @@
             margin-right: 50px
         & .phone
             +bold
-  .error
-    width: 100%
 @media (max-width: 1200px)
   .offer
     background-size: cover
@@ -66,6 +67,10 @@
       margin-bottom: 27px
       padding: 19px 64px
       font-size: 13px
+    .form-group
+      width: 100%
+    div.invalid
+      bottom: 85px
     &-explanation
       flex-direction: column
       & .explanation__text

@@ -83,15 +83,39 @@ img
     &:last-child
       margin-right: 0
 
-label.error
+.form-group
+  position: relative
   display: block
-  margin-bottom: 10px
+
+.input.invalid
+  border: 2px solid $border-color-invalid
+
+div.invalid
+  position: absolute
+  bottom: 106px
+  right: 15px
+  display: inline-block
+  padding: 6px 5px
+  max-width: 200px
   font-size: 12px
   text-align: center
-  color: #fd654a
   +bold
-
-  /*a.phone, a:visited .phone
-    color: $text-color
-    text-decoration: none*/
-
+  color: #ffffff
+  background: $border-color-invalid
+  border: 2px solid $text-color
+  border-radius: 4px
+  &:before
+    content: ''
+    position: absolute
+    right: 12px
+    bottom: -9px
+    width: 12px 
+    height: 12px
+    background: $border-color-invalid
+    border-right: 2px solid $text-color
+    border-bottom: 2px solid $text-color
+    transform: rotate(45deg)
+  @media(max-width: 1200px)
+    .form-group
+    div.invalid
+      bottom: 90px

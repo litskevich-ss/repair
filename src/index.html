@@ -10,8 +10,37 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/animate.css">
-  <link rel=" stylesheet" href="css/style.css">
-  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(52790344, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/52790344" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f7677627-9645-4a1b-b91c-035d99e14228&lang=ru_RU" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    ymaps.ready(init);
+
+    function init() {
+      var myMap = new ymaps.Map("map", {
+        center: [55.611409, 37.201122],
+        zoom: 13
+      });
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          iconCaption: 'Ремонт квартир',
+          balloonContentBody: [
+            '<address>',
+            '<strong>Ремонт квартир в Москве</strong>',
+            '<br/>',
+            '<strong>Адрес:</strong> г. Москва, ул. Ленинга, д. 10, корпус 2, оф. 308',
+            '</address>',
+            '<br />',
+            '<strong>Режим работы:</strong> с 9:00 до 18:00',
+            '<br />',
+            '<strong>Телефон:</strong><a href="tel:+7(495) 42-251-31"> +7 (495) 42-251-31</a>',
+          ].join('')
+        }),
+        myMap.geoObjects
+        .add(myPlacemark)
+    }
+  </script>
+
 </head>
 
 <body>
@@ -28,8 +57,8 @@
             <a href="tel:+74954225131" class="navbar__phone">+7(495) 42-251-31</a>
           </div>
           <!-- /.navbar__contacts -->
-          <button class="button navbar__button wow pulse animated" onclick="ym(52790344, 'reachGoal', 'button'); return true;" id="button" data-wow-delay="2s" data-wow-iteration="infinite"
-            data-wow-duration="2s">Перезвоните мне</button>
+          <button class="button navbar__button wow pulse animated" onclick="ym(52790344, 'reachGoal', 'button'); return true;"
+            id="button" data-wow-delay="2s" data-wow-iteration="infinite" data-wow-duration="2s">Перезвоните мне</button>
         </div>
         <!-- /.navbar__info -->
       </div>
@@ -92,8 +121,12 @@
             бесплатного дизайн-проекта!</span>
           <!-- /.section-subtitle -->
           <form action="#" class="form offer__form" id="offer-form">
-            <input type="text" name="customername" class="input offer__input wow slideInLeft" placeholder="Ваше имя">
-            <input type="tel" name="phone" class="input offer__input wow slideInLeft phone" placeholder="Ваш телефон">
+            <div class="form-group">
+              <input type="text" name="customername" class="input offer__input wow slideInLeft" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" class="input offer__input wow slideInLeft phone" placeholder="Ваш телефон">
+            </div>
             <button class="button offer__button wow slideInLeft">Получить бесплатный дизайн-проект</button>
           </form>
           <!-- /.form offer__form -->
@@ -272,6 +305,82 @@
     </section>
     <!-- /.section steps -->
 
+
+    <section class="section discount">
+      <div class="section-title discount-title">
+        <h2 class="discount-title__text wow fadeInLeft" data-wow-delay="0.3s">Ремонт обойдется Вам дешевле, так как мы
+          используем качественные материалы по
+          оптовым ценам</h2>
+        <!-- /.discount-title__text -->
+      </div>
+      <!-- /.section-title discount__title -->
+      <div class="container">
+        <div class="blocks">
+          <div class="block discount__block wow fadeInRight" data-wow-delay="0.3s">
+            <p class="block__text">Поможем закупить все материалы по оптовым ценам у проверенных поставщиков</p>
+            <!-- /.discount-block__text -->
+            <div class="block__image"><img src="img/discount/img-1.png" alt=""></div>
+            <!-- /.discount-block__image -->
+          </div>
+          <!-- /.discount-block -->
+          <div class="block discount__block wow fadeInRight" data-wow-delay="0.6s">
+            <p class="block__text">Мы дадим Вам <span>максимальные скидки</span> у наших партнеров для закупки
+              материалов
+              оптом</p>
+            <!-- /.discount-block__text -->
+            <div class="block__image"><img src="img/discount/img-2.png" alt=""></div>
+            <!-- /.discount-block__image -->
+          </div>
+          <!-- /.discount-block -->
+          <div class="block discount__block wow fadeInRight" data-wow-delay="0.9s">
+            <p class="block__text">Все, что не сможете найти в городе - поможем заказать <span>у проверенных
+                поставщиков</span></p>
+            <!-- /.discount-block__text -->
+            <div class="block__image"><img src="img/discount/img-3.png" alt=""></div>
+            <!-- /.discount-block__image -->
+          </div>
+          <!-- /.discount-block -->
+        </div>
+        <!-- /.blocks -->
+      </div>
+    </section>
+    <!-- /.section discount -->
+
+    <section class="section guarantees">
+      <div class="container">
+        <h2 class="section-title guarantees__title">Все наши гарантийные обязательства подробно и прозрачно описаны в
+          договоре
+        </h2>
+        <!-- /.section-title guarantees__title -->
+        <div class="blocks">
+          <div class="block guarantees__block">
+            <div class="block__image"><img src="img/guarantees/img-1.jpg" alt=""></div>
+            <!-- /.block__image -->
+            <a href="#" class="block__text">Гарантия на качество выполняемых работ</a>
+            <!-- /.block__text -->
+          </div>
+          <!-- /.block guarantees__block -->
+          <div class="block guarantees__block">
+            <div class="block__image"><img src="img/guarantees/img-2.jpg" alt=""></div>
+            <!-- /.block__image -->
+            <a href="#" class="block__text">Гарантия на фиксированные цены Виды работ и цены на них прописаны в договоре</a>
+            <!-- /.block__text -->
+          </div>
+          <!-- /.block guarantees__block -->
+          <div class="block guarantees__block">
+            <div class="block__image"><img src="img/guarantees/img-3.jpg" alt=""></div>
+            <!-- /.block__image -->
+            <a href="#" class="block__text">Гарантия на точное соблюдение сроков и ответственность за их невыполнение</a>
+            <!-- /.block__text -->
+          </div>
+          <!-- /.block guarantees__block -->
+        </div>
+        <!-- /.blocks -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section guarantees -->
+
     <section class="section brif">
       <div class="container">
         <div class="brif-block">
@@ -309,14 +418,21 @@
               телефону</h3>
             <span class="form__subtitle wow fadeInUp" data-wow-delay="0.4s">Для этого заполните форму ниже</span>
             <form action="#" id="brif-form">
-              <input type="text" name="customername" class="input brif__input wow slideInRight" data-wow-delay="0.1s"
-                placeholder="Ваше имя">
-                <span id="er"></span>
-              <input type="tel" name="phone" class="input brif__input phone wow slideInRight" data-wow-delay="0.2s"
-                placeholder=" Ваш телефон">
-              <input type="email" name="email" class="input brif__input wow slideInRight" data-wow-delay="0.3s"
-                placeholder=" Ваш email">
-              <button class="button brif__button wow slideInRight" data-wow-delay="0.4s">Рассчитать стоимость</button>
+              <div class="form-group">
+                <input type="text" name="customername" class="input brif__input wow slideInRight" data-wow-delay="0.1s"
+                  placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <input type="tel" name="phone" class="input brif__input phone wow slideInRight" data-wow-delay="0.2s"
+                  placeholder=" Ваш телефон">
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" class="input brif__input wow slideInRight" data-wow-delay="0.3s"
+                  placeholder=" Ваш email">
+              </div>
+              <div class="form-group">
+                <button class="button brif__button wow slideInRight" data-wow-delay="0.4s">Рассчитать стоимость</button>
+              </div>
               <span class="form__description wow fadeInUp" data-wow-delay="0.5s">Мы перезвоним Вам в течение 60 секунд</span>
             </form>
           </div>
@@ -326,12 +442,13 @@
         <!-- /.container -->
     </section>
     <!-- /.section brif -->
+
   </main>
 
   <footer class="footer">
-    <div class="map" id="map">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adb9c75e68c3fe1e8e1433ec3977b2717058bb057ae567e5aac7660d94f324ef2&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
-    </div>
+
+    <div class="map" id="map"></div>
+
     <div class="container">
       <div class="contacts-block">
         <div class="contacts">
@@ -362,7 +479,6 @@
     </div>
   </footer>
 
-
   <div class="upTop" id="upTop"><i class="fas fa-angle-double-up icon"></i></div>
 
   <div class="modal" id="modal">
@@ -370,7 +486,9 @@
       <button class="modal-dialog__close button" id="close">&times;</button>
       <h4 class="modal-dialog__title">Заказать звонок</h4>
       <form action="#" id="modal-form">
-        <input type="tel" name="phone" class="input modal-dialog__input phone" placeholder="Ваш телефон">
+        <div class="form-group">
+          <input type="tel" name="phone" class="input modal-dialog__input phone" placeholder="Ваш телефон">
+        </div>
         <div class="buttons">
           <button class="button modal-dialog__button" id="ordercall">Заказать</button>
         </div>
@@ -387,105 +505,6 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/main.js"></script>
-
-  <script>
-    /* Инициализация WOW.js */
-    new WOW().init();
-
-    $(document).ready(function () {
-      /* Валидация форм */
-      $('#offer-form').validate({
-        rules: {
-          customername: {
-            required: true,
-            minlength: 2,
-            maxlength: 15
-          },
-          phone: {
-            required: true
-          }
-        },
-        messages: {
-          customername: {
-            required: "Заполните поле",
-            minlength: "Поле должно содержать минимум 2 символа",
-            maxlength: "Поле не должно превышать 15 символов"
-          },
-          phone: "Заполните поле"
-        }
-      });
-
-      $('#brif-form').validate({
-        
-        rules: {
-          customername: {
-            required: true,
-            minlength: 2,
-            maxlength: 15
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          phone: {
-            required: true
-          }
-        },
-        messages: {
-          customername: {
-            required: "Заполните поле",
-            minlength: "Поле должно содержать минимум 2 символа",
-            maxlength: "Поле не должно превышать 15 символов"
-          },
-          phone: "Заполните поле",
-          email: {
-            required: "Заполните поле",
-            email: "Введите корректный email"
-          }
-        }
-      });
-
-      $('#modal-form').validate({
-        rules: {
-          phone: {
-            required: true
-          }
-        },
-        messages: {
-          phone: "Заполните поле"
-        }
-      });
-
-      /* Маска для телефона*/
-      $('.phone').mask('8 (999) 999-99-99');
-
-      /* Инициализация слайдера */
-      $('.slider').owlCarousel({
-        items: 6,
-        loop: true,
-        nav: true,
-        dots: false,
-        itemElement: 'slider_item',
-        navContainerClass: 'portfolio__arrows',
-        navClass: ['arrows__left', 'arrows__right'],
-        navText: [],
-        margin: 30,
-        responsiveClass: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          768: {
-            items: 2
-          },
-          1200: {
-            items: 3
-          }
-        }
-      });
-
-    });
-  </script>
 
 </body>
 
