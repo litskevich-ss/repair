@@ -1,4 +1,5 @@
 .brif
+  padding: 50 0
   background-image: url('../img/brif/brif-color-bg.jpg'), url('../img/brif/brif-bg.jpg')
   background-position: left center, center right
   background-size: 50%, contain
@@ -21,9 +22,15 @@
     max-width: 370px
     margin-top: 15px
     margin-bottom: 30px
+  .form-group
+    width: 100%
+    max-width: 370px
+  div.invalid
+    bottom: 90px
   .interview
     padding-right: 70px
     color: $text-color-black
+    border: 1px solid blue
     &__title
       margin-bottom: 50px
       font-size: 22px
@@ -72,26 +79,28 @@
     background-size: 50%, cover
     &__form
       padding-left: 30px
-  .interview
-    padding-right: 30px
-    &__title
-      font-size: 20px
-      margin-bottom: 15px
-      margin-top: 60px
-    &__subtitle
-      margin-bottom: 30px
-    &-list
-      &__text
-        font-size: 14px
-        max-width: 300px
-      &__counter
-        margin-right: 20px
-  .form
-    &__title
-      font-size: 20px
-      margin-bottom: 15px
-    &__subtitle
-      margin-bottom: 30px
+    .interview
+      padding-right: 30px
+      &__title
+        font-size: 20px
+        margin-bottom: 15px
+        margin-top: 60px
+      &__subtitle
+        margin-bottom: 30px
+      &-list
+        &__text
+          font-size: 14px
+          max-width: 300px
+        &__counter
+          margin-right: 20px
+    .form
+      &__title
+        font-size: 20px
+        margin-bottom: 15px
+      &__subtitle
+        margin-bottom: 30px
+    .form-group
+      display: inline-block   
 @media (max-width: 768px)
   .brif
     background-position: top center, center bottom
@@ -101,6 +110,8 @@
       flex-direction: column
     &__form
       margin-top: 80px
-  .interview
-    &__title
+    .interview
+      &__title
       margin-top: 60px
+    .form-group
+      display: inline-block
